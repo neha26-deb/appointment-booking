@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "healthBots_nd_health_bot_name": {
+            "defaultValue": "nd-health-bot",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.HealthBot/healthBots",
+            "apiVersion": "2021-08-24",
+            "name": "[parameters('healthBots_nd_health_bot_name')]",
+            "location": "eastus",
+            "sku": {
+                "name": "F0"
+            },
+            "properties": {}
+        }
+    ]
+}
